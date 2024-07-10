@@ -5,9 +5,11 @@ import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Products, { loader as productsLoader } from './routes/Products/Products.jsx'
 import ProductDetails, { loader as productLoader} from './routes/ProductDetails/ProductDetails.jsx'
+import ErrorComponent from './components/ErrorComponent/ErrorComponent.jsx'
 
 const router = createBrowserRouter([
-  {path: '/', element: <RootLayout />, children: [
+  {
+    path: '/', element: <RootLayout />, children: [
     {
       path: '/items',
       element: <Products />,
@@ -18,7 +20,15 @@ const router = createBrowserRouter([
       element: <ProductDetails/>,
       loader: productLoader
     }
-  ]}
+  ]},
+  {
+    path: '/', element: <RootLayout/>, children: [
+      {
+        path: '/*',
+        element: <ErrorComponent />
+      }
+    ]
+  }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

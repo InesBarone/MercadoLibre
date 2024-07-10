@@ -1,0 +1,14 @@
+.not-found {
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.not-found p {
+  color: gray;
+}
+.not-found p.title {
+  font-size: 30px;
+  color: gray;
+}/*# sourceMappingURL=ErrorComponent.css.map */

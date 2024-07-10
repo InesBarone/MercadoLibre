@@ -1,14 +1,14 @@
 .nav {
   background-color: #fee600;
   width: 100%;
-  height: 60px;
-  padding: 12px;
+  height: 70px;
+  padding: 12px 20px;
   display: flex;
   justify-content: center;
 }
 .nav div {
   width: 100%;
-  max-width: 900px;
+  max-width: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,22 +18,29 @@
 .nav div form {
   height: 100%;
   width: 100%;
-  border: 5px solid white;
-  border-radius: 5px;
   display: flex;
+  border-radius: 5px;
+  overflow: hidden;
 }
 .nav div form .navbar {
   height: 100%;
   padding-left: 10px;
   width: calc(100% - 35px);
   border: none;
-  border-right: 1px solid rgb(184, 184, 184);
+  font-size: 18px;
+  color: #333333;
+  border-radius: 5px 0 0 5px;
+}
+.nav div form .navbar::-moz-placeholder {
+  color: #999999;
+}
+.nav div form .navbar::placeholder {
+  color: #999999;
 }
 .nav div form .navButton {
-  width: 35px;
+  width: 45px;
   height: 100%;
   border: none;
-  background-color: white;
-  color: rgb(184, 184, 184);
+  background-color: #eeeeee;
   cursor: pointer;
 }/*# sourceMappingURL=NavComponent.css.map */

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './ProductCard.css';
 
-function ProductCard({id, picture, price_amount, price_decimal, price_currency, title, textButton, free_shipping}) {
+function ProductCard({id, picture, price_amount, price_decimal, price_currency, title, free_shipping, address}) {
 
     return (
         <Link to={"/items/" + id}>
@@ -12,9 +12,9 @@ function ProductCard({id, picture, price_amount, price_decimal, price_currency, 
                     </div>
                     <div className='cards-main-info'>
                         <div>
-                            <span>{price_currency}$ {price_amount}</span>
+                            <span className='price'>{price_currency}$ {price_amount}</span>
                             {free_shipping?<img src='/src/assets/ic_shipping.png'/>: ''}
-                            <button>{textButton}</button>
+                            <span className='location'>{address}</span>
                         </div>
                         <span>{title}</span>
                     </div>

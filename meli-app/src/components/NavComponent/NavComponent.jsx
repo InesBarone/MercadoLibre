@@ -18,7 +18,7 @@ function NavComponent() {
             <img src={logo} alt="Logo" />
           </Link>
           <form method="get" id="buscarform">
-                <input className="navbar" value={searchText} type="text" id="s" placeholder="Buscar" onChange={handleSearchText}/>
+                <input className="navbar" value={searchText} type="text" id="s" placeholder="Nunca dejes de buscar" onChange={handleSearchText}/>
                 <Link to={`/items?search=${searchText}`}>
                   <button className="navButton" type="submit"><img src="/src/assets/ic_search.png"/></button>
                 </Link>

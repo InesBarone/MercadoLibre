@@ -15,12 +15,12 @@ function ProductsList() {
                     key={product.id} 
                     id={product.id} 
                     picture={product.picture} 
-                    title={product.title} 
-                    textButton={'More Info'} 
+                    title={product.title}
                     price_amount={product.price.amount} 
                     price_decimal={product.price.decimal?product.price.decimal:""} 
                     price_currency={product.price.currency} 
-                    free_shipping={product.free_shipping}/>)
+                    free_shipping={product.free_shipping}
+                    address={product.address}/>)
                 )}
             </ul>
         )}

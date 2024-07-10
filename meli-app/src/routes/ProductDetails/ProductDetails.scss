@@ -2,19 +2,18 @@
     background-color: white;
     min-height: calc(100vh - 100px);
     border-radius: 5px;
-    padding: 25px;
+    padding: 32px;
     display: flex;
     flex-direction: column;
     gap: 100px;
     
     .product-details-main {
         display: flex;
-        gap: 20px;
         justify-content: space-between;
 
         .product-details-image-container {
-            max-width: 550px;
-            max-height: 550px;
+            width: 680px;
+            height: 680px;
             border-radius: 5px;
             overflow: hidden;
 
@@ -29,35 +28,34 @@
             display: flex;
             flex-direction: column;
             width: 30%;
-            gap: 5px;
+            gap: 32px;
+            color: #333333;
 
-            .product-details-type {
-                color: gray;
-                font-size: 15px;
-            }
-
-            .product-details-title {
-                font-weight: 600;
-                font-size: 25px;
-            }
-
-            .product-details-price {
-                font-size: 30px;
+            div {
                 display: flex;
-                margin-top: 10px;
-
-                span {
-                    font-size: 15px;
-                    margin-top: 4px;
+                flex-direction: column;
+                gap: 14px;
+                .product-details-type {
+                    color: #999999;
+                    font-size: 14px;
+                }
+    
+                .product-details-title {
+                    font-weight: 600;
+                    font-size: 24px;
                 }
             }
 
+            .product-details-price {
+                font-size: 46px;
+                display: flex;
+            }
+
             .product-details-but {
-                margin-top: 20px;
                 height: 40px;
                 border-radius: 5px;
                 border: none;
-                background-color: #3283f3;
+                background-color: #3483Fa;
                 color: white;
                 font-size: 15px;
                 cursor: pointer;
@@ -74,10 +72,12 @@
         display: flex;
         flex-direction: column;
         gap: 30px;
+        color: #999999;
 
         span {
             font-size: 25px;
             font-weight: 600;
+            color: #333333;
         }
 
         p {

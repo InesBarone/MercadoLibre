@@ -1,11 +1,11 @@
 .background {
   background-color: #eeeeee;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   display: flex;
   justify-content: center;
   min-height: calc(100vh - 60px);
 }
 .background .content {
-  max-width: 900px;
+  max-width: 1200px;
   width: 100%;
 }/*# sourceMappingURL=MainBackground.css.map */

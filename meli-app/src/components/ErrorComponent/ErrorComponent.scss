@@ -1,0 +1,16 @@
+.not-found {
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+
+    p {
+        color: gray;
+
+        &.title {
+            font-size: 30px;
+        color: gray;
+        }
+    }
+}
