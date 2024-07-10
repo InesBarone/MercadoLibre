@@ -1,0 +1,76 @@
+.product-details-container {
+  background-color: white;
+  min-height: calc(100vh - 100px);
+  border-radius: 5px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.product-details-container .product-details-main {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.product-details-container .product-details-main .product-details-image-container {
+  max-width: 550px;
+  max-height: 550px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.product-details-container .product-details-main .product-details-image-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.product-details-container .product-details-main .product-details-info {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  gap: 5px;
+}
+.product-details-container .product-details-main .product-details-info .product-details-type {
+  color: gray;
+  font-size: 15px;
+}
+.product-details-container .product-details-main .product-details-info .product-details-title {
+  font-weight: 600;
+  font-size: 25px;
+}
+.product-details-container .product-details-main .product-details-info .product-details-price {
+  font-size: 30px;
+  display: flex;
+  margin-top: 10px;
+}
+.product-details-container .product-details-main .product-details-info .product-details-price span {
+  font-size: 15px;
+  margin-top: 4px;
+}
+.product-details-container .product-details-main .product-details-info .product-details-but {
+  margin-top: 20px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: #3283f3;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+.product-details-container .product-details-main .product-details-info .product-details-but:hover {
+  background-color: #2968c8;
+  transition: 0.2s ease;
+}
+.product-details-container .product-details-description {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.product-details-container .product-details-description span {
+  font-size: 25px;
+  font-weight: 600;
+}
+.product-details-container .product-details-description p {
+  max-width: 70%;
+  line-height: 25px;
+}/*# sourceMappingURL=ProductDetails.css.map */

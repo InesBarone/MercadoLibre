@@ -1,0 +1,12 @@
+.background {
+    background-color: #eeeeee;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    min-height: calc(100vh - 60px);
+
+    .content {
+        max-width: 900px;
+        width: 100%;
+    }
+}

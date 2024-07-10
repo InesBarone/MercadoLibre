@@ -5,11 +5,14 @@
     display: flex;
     align-items: start;
     gap: 10px;
+    border-radius: 5px;
+    
 
     &:hover {
-        box-shadow: 0 0 10px rgb(216, 216, 216);
+        box-shadow: 0 0 10px rgba(216, 216, 216, 0.616);
         cursor: pointer;
-        transition: 0.3s ease-in-out;
+        transition: 0.1s ease-in-out;
+        color: #3283f3;
     }
 
     div {

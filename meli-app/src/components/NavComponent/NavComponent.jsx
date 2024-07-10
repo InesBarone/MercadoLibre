@@ -1,18 +1,27 @@
 import './NavComponent.css';
 import logo from '../../assets/logo-mini.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
+import { Link } from 'react-router-dom'
 
 function NavComponent() {
+  const [searchText, setSearchText] = useState('');
+
+  function handleSearchText(e) {
+    setSearchText(e.target.value);
+  }
 
   return (
     <>
       <div className="nav">
         <div>
-          <img src={logo} alt="Logo" />
+          <Link to="/">
+            <img src={logo} alt="Logo" />
+          </Link>
           <form method="get" id="buscarform">
-                <input className="navbar" type="text" id="s" placeholder="Buscar" />
-                <button className="navButton" type="submit"><FontAwesomeIcon icon={faSearch} /></button>
+                <input className="navbar" value={searchText} type="text" id="s" placeholder="Buscar" onChange={handleSearchText}/>
+                <Link to={`/items?search=${searchText}`}>
+                  <button className="navButton" type="submit"><img src="/src/assets/ic_search.png"/></button>
+                </Link>
           </form>
         </div>
       </div>
