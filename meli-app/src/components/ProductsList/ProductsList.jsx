@@ -5,7 +5,6 @@ import './ProductsList.css';
 
 function ProductsList() {
   const data = useLoaderData();
-    console.log(data.items);
 
   return (
     <>
