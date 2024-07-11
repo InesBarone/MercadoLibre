@@ -23,7 +23,7 @@ function ProductDetails() {
                 <span className='product-details-type'>{productData.item.condition === 'new'? "Nuevo - ": ""}{"Total disponibles: " + productData.item.initial_quantity}</span>
                 <h2 className='product-details-title'>{productData.item.title}</h2>
               </div>
-              <span className='product-details-price'>{productData.item.price.currency}$ {productData.item.price.amount}<span>{productData.item.price.decimals?productData.item.price.decimals: ""}</span></span>
+              <span className='product-details-price'>$ {productData.item.price.amount}<span>{productData.item.price.decimals?productData.item.price.decimals: ""}</span></span>
               <button className='product-details-but'>Comprar</button>
             </div>
           </div>
