@@ -3,6 +3,7 @@ import { useLoaderData, Link } from 'react-router-dom';
 import './ProductDetails.css';
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
 import ErrorComponent from '../../components/ErrorComponent/ErrorComponent';
+import React from 'react';
 
 function ProductDetails() {
   const productData = useLoaderData();
@@ -20,7 +21,7 @@ function ProductDetails() {
             <div className='product-details-info'>
               <div>
                 <span className='product-details-type'>{productData.item.condition === 'new'? "Nuevo - ": ""}{"Total disponibles: " + productData.item.initial_quantity}</span>
-                <h3 className='product-details-title'>{productData.item.title}</h3>
+                <h2 className='product-details-title'>{productData.item.title}</h2>
               </div>
               <span className='product-details-price'>{productData.item.price.currency}$ {productData.item.price.amount}<span>{productData.item.price.decimals?productData.item.price.decimals: ""}</span></span>
               <button className='product-details-but'>Comprar</button>
@@ -28,7 +29,11 @@ function ProductDetails() {
           </div>
           <div className='product-details-description'>
             <span>Descripción del producto</span>
-            <p>{productData.item.description? productData.item.description: "No hay ninguna descripcion para este producto."}</p>
+            <p>
+              {productData.item.description? 
+                productData.item.description.split('\n').map((linea, index) => {
+                  return <React.Fragment key={index}>{linea}<br/></React.Fragment>;
+                }): "No hay ninguna descripcion para este producto."}</p>
           </div>
         </div>
       </>

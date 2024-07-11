@@ -9,7 +9,9 @@
   box-shadow: 0 0 10px rgba(216, 216, 216, 0.616);
   cursor: pointer;
   transition: 0.1s ease-in-out;
-  color: #3483fa;
+}
+.cards-li:hover div .cards-main-info .price {
+  color: #3483Fa;
 }
 .cards-li div {
   display: flex;
