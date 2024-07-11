@@ -12,7 +12,7 @@ function ProductCard({id, picture, price_amount, price_decimal, price_currency, 
                     </div>
                     <div className='cards-main-info'>
                         <div>
-                            <span className='price'>{price_currency}$ {price_amount}</span>
+                            <span className='price'>$ {price_amount}</span>
                             {free_shipping?<img src='/src/assets/ic_shipping.png'/>: ''}
                             <span className='location'>{address}</span>
                         </div>
