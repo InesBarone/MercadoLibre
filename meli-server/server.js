@@ -12,6 +12,8 @@ app.get('/ping', (req, res) => {
 })
 
 app.use('/api/items', items);
+
+// Handle error 404
 app.use(function(req, res){
     res.status(404);
   

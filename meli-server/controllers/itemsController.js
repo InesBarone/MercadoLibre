@@ -1,3 +1,4 @@
+// Main fetch function --------------------------------
 async function apiRequest(url, method) {
     const request = await fetch(url, {method: method});
     const response = await request.json();
@@ -5,6 +6,7 @@ async function apiRequest(url, method) {
     return {status: request.status, response: response}
 }
 
+// Fetch functions ------------------------------------
 async function fetchGetItems(query) {
     const url = `https://api.mercadolibre.com/sites/MLA/search?q=${query}&limit=4`;
     const response = await apiRequest(url, "GET");
@@ -40,7 +42,7 @@ async function fetchSellerData(seller_id) {
     return response;
 }
 
-
+// Auxiliar functions ----------------------------------
 function getCategories(response) {
     let categories = [];
 
@@ -108,6 +110,8 @@ async function getItemsInformation(response) {
     return items;
 }
 
+
+// Principal -------------------------------------------
 export const getItems = async(req, res, next) => {
     const query = req.query.search;
     let response;
