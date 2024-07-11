@@ -1,5 +1,6 @@
-import './LoadingComponent.css';
 import BarLoader from "react-spinners/BarLoader";
+
+import './LoadingComponent.css';
 
 function LoadingComponent() {
     const override = {

@@ -1,7 +1,9 @@
-import './NavComponent.css';
-import logo from '../../assets/logo-mini.png'
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
+
+import './NavComponent.css';
+
+import logo from '../../assets/logo-mini.png'
 
 function NavComponent() {
   const [searchText, setSearchText] = useState('');

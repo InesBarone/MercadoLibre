@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+
 import './ProductCard.css';
 
 function ProductCard({id, picture, price_amount, price_decimal, price_currency, title, free_shipping, address}) {

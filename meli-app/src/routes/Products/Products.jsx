@@ -1,7 +1,9 @@
+import { Outlet } from 'react-router-dom';
+
 import ProductsList from "../../components/ProductsList/ProductsList"
-import { Outlet, useLoaderData, useParams } from 'react-router-dom';
-import './Products.css'
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
+
+import './Products.css'
 
 function Products() {
 

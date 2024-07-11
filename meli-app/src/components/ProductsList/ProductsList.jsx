@@ -1,6 +1,7 @@
 import { useLoaderData } from 'react-router-dom';  
 
 import ProductCard from '../ProductCard/ProductCard';
+
 import './ProductsList.css';
 
 function ProductsList() {

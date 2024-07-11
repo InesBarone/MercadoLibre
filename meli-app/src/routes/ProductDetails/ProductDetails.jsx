@@ -1,9 +1,10 @@
-import { useLoaderData, Link } from 'react-router-dom';
+import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
-import './ProductDetails.css';
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
 import ErrorComponent from '../../components/ErrorComponent/ErrorComponent';
-import React from 'react';
+
+import './ProductDetails.css';
 
 function ProductDetails() {
   const productData = useLoaderData();
