@@ -33,7 +33,7 @@
 .product-details-container .product-details-main .product-details-info div {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 .product-details-container .product-details-main .product-details-info div .product-details-type {
   color: #999999;
@@ -46,6 +46,10 @@
 .product-details-container .product-details-main .product-details-info .product-details-price {
   font-size: 46px;
   display: flex;
+}
+.product-details-container .product-details-main .product-details-info .product-details-price span {
+  font-size: 24px;
+  margin-top: 5px;
 }
 .product-details-container .product-details-main .product-details-info .product-details-but {
   height: 40px;
@@ -63,15 +67,15 @@
 .product-details-container .product-details-description {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  color: #999999;
+  gap: 32px;
 }
 .product-details-container .product-details-description span {
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 28px;
   color: #333333;
 }
 .product-details-container .product-details-description p {
   max-width: 70%;
-  line-height: 25px;
+  line-height: 23px;
+  font-size: 16px;
+  color: #999999;
 }/*# sourceMappingURL=ProductDetails.css.map */

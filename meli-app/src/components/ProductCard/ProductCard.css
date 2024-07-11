@@ -29,6 +29,7 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 5px;
 }
 .cards-li div .cards-main-info {
   display: flex;

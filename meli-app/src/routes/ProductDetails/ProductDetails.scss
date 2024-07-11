@@ -34,7 +34,7 @@
             div {
                 display: flex;
                 flex-direction: column;
-                gap: 14px;
+                gap: 16px;
                 .product-details-type {
                     color: #999999;
                     font-size: 14px;
@@ -49,6 +49,11 @@
             .product-details-price {
                 font-size: 46px;
                 display: flex;
+
+                span {
+                    font-size: 24px;
+                    margin-top: 5px;
+                }
             }
 
             .product-details-but {
@@ -71,18 +76,18 @@
     .product-details-description {
         display: flex;
         flex-direction: column;
-        gap: 30px;
-        color: #999999;
+        gap: 32px;
 
         span {
-            font-size: 25px;
-            font-weight: 600;
+            font-size: 28px;
             color: #333333;
         }
 
         p {
             max-width: 70%;
-            line-height: 25px;
+            line-height: 23px;
+            font-size: 16px;
+            color: #999999;
         }
     }
 }
