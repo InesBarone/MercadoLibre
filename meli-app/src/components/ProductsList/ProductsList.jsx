@@ -23,7 +23,8 @@ function ProductsList() {
                             price_amount={product.price.amount} 
                             price_decimal={product.price.decimal?product.price.decimal:""} 
                             free_shipping={product.free_shipping}
-                            address={product.address}/>)
+                            address={product.address}
+                            currency={product.currency}/>)
                         )}
                     </ul>
                 )}

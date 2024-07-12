@@ -4,7 +4,7 @@ import { useLoaderData } from 'react-router-dom';
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
 import ErrorComponent from '../../components/ErrorComponent/ErrorComponent';
 
-import formatPrice from '../../utils/price';
+import { formatPrice, getPriceSymbol } from '../../utils/price';
 
 import './ProductDetails.scss';
 
@@ -28,7 +28,7 @@ function ProductDetails() {
                     <span className='product-details-type'>{productData.item.condition === 'new'? "Nuevo - ": ""}{"Total disponibles: " + productData.item.initial_quantity}</span>
                     <h2 className='product-details-title'>{productData.item.title}</h2>
                   </div>
-                  <span className='product-details-price'><span className='price-symbol'>$</span>{formatPrice(productData.item.price.amount)}<span className='price-decimals'>{productData.item.price.decimals?productData.item.price.decimals: ""}</span></span>
+                  <span className='product-details-price'><span className='price-symbol'>{getPriceSymbol(productData.item.currency)}</span>{formatPrice(productData.item.price.amount)}<span className='price-decimals'>{productData.item.price.decimals?productData.item.price.decimals: ""}</span></span>
                   <button className='product-details-but'>Comprar</button>
                 </div>
               </div>

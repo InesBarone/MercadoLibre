@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 
-import formatPrice from '../../utils/price';
+import { formatPrice, getPriceSymbol } from '../../utils/price';
 
 import './ProductCard.scss';
 
-function ProductCard({id, picture, price_amount, price_decimal, title, free_shipping, address}) {
+function ProductCard({id, picture, price_amount, price_decimal, title, free_shipping, address, currency}) {
 
     return (
         <Link to={"/items/" + id}>
@@ -16,7 +16,7 @@ function ProductCard({id, picture, price_amount, price_decimal, title, free_ship
                     </div>
                     <div className='cards-main-info'>
                         <div>
-                            <span className='price'><span className='price-symbol'>$</span>{formatPrice(price_amount)}<span className='price-decimals'>{price_decimal}</span></span>
+                            <span className='price'><span className='price-symbol'>{getPriceSymbol(currency)}</span>{formatPrice(price_amount)}<span className='price-decimals'>{price_decimal}</span></span>
                             {free_shipping?<img src='/src/assets/ic_shipping.png'/>: ''}
                             <span className='location'>{address}</span>
                         </div>

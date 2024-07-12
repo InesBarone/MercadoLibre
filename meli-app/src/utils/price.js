@@ -1,4 +1,4 @@
-export default function formatPrice(number) {
+export function formatPrice(number) {
     let numberStr = number.toString();
 
     let arrayFormatedNumber = [];
@@ -15,3 +15,11 @@ export default function formatPrice(number) {
     
     return formatedNumber;
 };
+
+export function getPriceSymbol(currency) {
+    if(currency != 'USD') {
+        return '$'
+    }
+
+    return 'U$S'
+}
