@@ -25,6 +25,14 @@
         width: 90%;
         max-height: 180px;
 
+        @media screen and (min-width: 481px) and (max-width: 768px) {
+            width: 95%
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+            width: 100%
+        }
+
         .cards-image-container {
             width: 180px;
             height: 180px;
@@ -32,6 +40,11 @@
             border-radius: 4px;
             flex-shrink: 0;
             padding: 16px;
+
+            @media screen and (min-width: 320px) and (max-width: 480px) {
+                width: 150px;
+                height: 150px;
+            }
     
             img {
                 width: 100%;
@@ -52,16 +65,30 @@
             div {
                 display: flex;
                 align-items: center;
-                gap: 10px;
+                gap: 5px;
                 width: 100%;
+
     
                 .price {
                     font-size: 24px;
                     text-wrap: nowrap;
+                    display: flex;
+                    align-items: center;
 
-                    @media(max-width:480px) {
-                        font-size: 20px;   
+                    @media screen and (min-width: 320px) and (max-width: 480px) {
+                        font-size: 20px;
                     }
+
+                    .price-symbol {
+                        font-size: 24px;
+                        margin-right: 3px;
+                    }
+
+                    .price-decimals {
+                        margin-top: 2px;
+                        font-size: 12px;
+                    }
+
                 }
     
                 img {
@@ -76,11 +103,17 @@
                 }
             }
 
-            span {
+            .cards-title {
                 max-width: 90%;
-                overflow: hidden;
-                text-overflow: ellipsis;
                 font-size: 18px;
+                overflow: hidden;
+                
+                @media screen and (min-width: 320px) and (max-width: 480px) {
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    width: 150px;
+                    font-size: 15px;
+                }
             }
         }
     }

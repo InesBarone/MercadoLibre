@@ -5,6 +5,11 @@
     justify-content: center;
     min-height: calc(100vh - 60px);
 
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        padding: 0 10px 10px 10px;
+    }
+
+
     .content {
         max-width: 1200px;
         width: 100%;

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
 
-import './NavComponent.css';
+import './NavComponent.scss';
 
 import logo from '../../assets/logo-mini.png'
 

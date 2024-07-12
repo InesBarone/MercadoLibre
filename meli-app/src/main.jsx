@@ -27,7 +27,7 @@ const router = createBrowserRouter([
     path: '/', element: <RootLayout/>, children: [
       {
         path: '/*',
-        element: <ErrorComponent />
+        element: <ErrorComponent errorType={'404'} />
       }
     ]
   }

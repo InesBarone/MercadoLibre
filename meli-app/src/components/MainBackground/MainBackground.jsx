@@ -1,4 +1,4 @@
-import './MainBackground.css';
+import './MainBackground.scss';
 
 function MainBackground({children}) {
 

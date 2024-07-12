@@ -31,6 +31,6 @@ app.use(function(req, res){
   
     // Texto plano
     res.type('txt').send('Not found');
-  });
+});
 
 app.listen(8080, () => console.log('Server is running on port 8080'));

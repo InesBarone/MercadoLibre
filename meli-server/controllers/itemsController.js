@@ -59,6 +59,10 @@ function getCategories(response) {
         })
     }
 
+    if (categories.length === 0 && response.filters.length > 0 && response.filters[0].id === "category" ) {
+        categories = [response.filters[0].values[0].name];
+    }
+
     return categories;
 }
 
