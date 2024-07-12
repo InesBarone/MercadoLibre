@@ -37,7 +37,8 @@ ProductCard.propTypes = {
     price_decimal: PropTypes.string,
     title: PropTypes.string.isRequired, 
     free_shipping: PropTypes.bool.isRequired,
-    address: PropTypes.string.isRequired
+    address: PropTypes.string.isRequired,
+    currency: PropTypes.string.isRequired
 }
 
 export default ProductCard
