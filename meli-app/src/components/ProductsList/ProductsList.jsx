@@ -24,7 +24,7 @@ function ProductsList() {
                             price_decimal={product.price.decimal?product.price.decimal:""} 
                             free_shipping={product.free_shipping}
                             address={product.address}
-                            currency={product.currency}/>)
+                            currency={product.price.currency}/>)
                         )}
                     </ul>
                 )}

@@ -7,6 +7,8 @@ import './ProductCard.scss';
 
 function ProductCard({id, picture, price_amount, price_decimal, title, free_shipping, address, currency}) {
 
+    console.log(currency);
+
     return (
         <Link to={"/items/" + id}>
             <li className='cards-li'>
