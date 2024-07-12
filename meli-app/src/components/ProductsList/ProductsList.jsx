@@ -29,8 +29,8 @@ function ProductsList() {
                 )}
                 {data.items.length === 0 && (
                     <div className='no-product-list'>
-                        <h2>Busca los productos que estás buscando!</h2>
-                        <p>Empezá a recorrer nuestra tienda con la barra de búsqueda.</p>
+                        <h3>No se encontraron productos</h3>
+                        <p>Busca los productos en la barra de búsqueda!</p>
                     </div>
                 )}
             </>
