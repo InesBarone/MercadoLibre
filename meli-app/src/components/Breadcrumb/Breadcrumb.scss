@@ -5,16 +5,30 @@
         font-size: 14px;
         color: #999999;
         cursor:default;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        @media screen and (min-width: 320px) and (max-width: 768px) {
+            font-size: 12px;
+        }
     }
 
     svg {
         width: 6px;
         height: 8px;
+        flex-shrink: 0;
     }
-
+    
     .categories {
         display: flex;
         align-items: center;
-        gap: 10px
+        gap: 10px;
+        overflow-x: hidden;
+
+        @media screen and (min-width: 320px) and (max-width: 768px) {
+            gap: 5px
+        }
+
     }
 }
