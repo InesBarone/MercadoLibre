@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { useLoaderData } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 
@@ -18,14 +16,14 @@ function Breadcrumb({categories}) {
         } 
     } else {
         categoriesComponent = categories.map((category, index) => (
-            <React.Fragment key={index}>
+            <div key={index} className='categories'>
                 {index !== 0 && (
                     <svg xmlns="http://www.w3.org/2000/svg">
                         <path fill="none" stroke="#666" d="M1 0l4 4-4 4"></path>
                     </svg>
                 )}
                 <p>{category}</p>
-            </React.Fragment>
+            </div>
         ));
     }
 
