@@ -63,6 +63,8 @@ function getCategories(response) {
         categories = [response.filters[0].values[0].name];
     }
 
+
+
     return categories;
 }
 
@@ -153,6 +155,7 @@ export const getItem = async(req, res, next) => {
     let responseItem;
     let responseDescription;
     let responseCategory;
+    let categories;
 
     try {
         responseItem = await fetchGetItem(id_params);
@@ -184,6 +187,11 @@ export const getItem = async(req, res, next) => {
         return res.status(500).json({error: 'Error getting API data'})
     }
 
+    categories = [responseCategory.response.name];
+    for (let i = 0; i < responseCategory.response.path_from_root.length; i++) {
+        categories.push(responseCategory.response.path_from_root[i].name);
+    }
+
     const result = {
         author: {
             name: "María Inés",
@@ -192,7 +200,7 @@ export const getItem = async(req, res, next) => {
         item: {
             id: responseItem.response.id,
             title: responseItem.response.title,
-            category: responseCategory.response.name,
+            category: categories,
             price: {
                 currency: responseItem.response.currency_id,
                 amount: responseItem.response.price.toString().split('.')[0],

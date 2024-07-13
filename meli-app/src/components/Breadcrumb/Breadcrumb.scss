@@ -6,4 +6,15 @@
         color: #999999;
         cursor:default;
     }
+
+    svg {
+        width: 6px;
+        height: 8px;
+    }
+
+    .categories {
+        display: flex;
+        align-items: center;
+        gap: 10px
+    }
 }

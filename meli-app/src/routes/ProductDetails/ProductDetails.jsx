@@ -17,7 +17,7 @@ function ProductDetails() {
       <>
         {productData.status && productData.status != '200'? <ErrorComponent errorType='404'></ErrorComponent>:
           <>
-            <Breadcrumb category={productData.item.category}/>
+            <Breadcrumb categories={productData.item.category}/>
             <div className='product-details-container'>
               <div className='product-details-main'>
                 <div className='product-details-image-container'>
